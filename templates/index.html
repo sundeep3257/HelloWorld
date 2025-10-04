@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        
+        .hello-world {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #ff6600;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .hello-world .clickable-w {
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .hello-world .clickable-w:hover {
+            color: #00ff00;
+        }
+        
+        .hello-world .clickable-w.clicked {
+            color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <div class="hello-world">
+        Hello <span class="clickable-w" onclick="changeColor()">W</span>orld
+    </div>
+
+    <script>
+        function changeColor() {
+            const wElement = document.querySelector('.clickable-w');
+            wElement.classList.add('clicked');
+        }
+    </script>
+</body>
+</html>
